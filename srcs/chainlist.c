@@ -6,10 +6,12 @@
 */
 
 #include "my.h"
+#include "struct.h"
+#include <stdlib.h>
 
-First *init(int nb)
+First *init(int data)
 {
-	First	*first_elem = malloc(sizeof(*element));
+	First	*first_elem = malloc(sizeof(*first_elem));
 	Chainlist	*element = malloc(sizeof(*element));
 
 	element->nb = data;
@@ -23,7 +25,7 @@ void insert_begin(First *first_elem, int data)
 	Chainlist *new_elem = malloc(sizeof(*new_elem));
 
 	new_elem->nb = data;
-	new_elem->next = first_elem;
+	new_elem->next = first_elem->first;
 	first_elem->first = new_elem;
 }
 

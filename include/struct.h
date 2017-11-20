@@ -18,3 +18,8 @@ struct First
 {
 	Chainlist *first;
 };
+
+First *init(int nb);
+void insert_begin(First *first_elem, int data);
+void insert_end(First *first_elem, int data);
+void suppression(First *first_elem);
