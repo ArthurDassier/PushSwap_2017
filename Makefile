@@ -6,10 +6,12 @@
 ##
 
 SRC	=	srcs/push_swap.c	\
+		srcs/actions.c		\
+		srcs/chainlist.c	\
 
 OBJ	=	$(SRC:.c = .o)
 
-NAME	=	my_printf
+NAME	=	my_pushswap
 
 LIB_DIR	=	./lib
 

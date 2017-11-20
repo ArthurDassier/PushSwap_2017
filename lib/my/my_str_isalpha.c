@@ -2,10 +2,10 @@
 ** EPITECH PROJECT, 2017
 ** my_str_isalpha
 ** File description:
-** 
+** sdfg
 */
 
-int	my_str_isalpha(char const *str)
+int my_str_isalpha(char const *str)
 {
 	return(0);
 }

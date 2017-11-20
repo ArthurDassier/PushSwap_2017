@@ -2,10 +2,10 @@
 ** EPITECH PROJECT, 2017
 ** my_isneg
 ** File description:
-** 
+** fgjk
 */
 
-int	my_isneg(int nb)
+int my_isneg(int nb)
 {
 	return(0);
 }

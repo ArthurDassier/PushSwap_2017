@@ -2,9 +2,9 @@
 ** EPITECH PROJECT, 2017
 ** my_strcat
 ** File description:
-** 
+**
 */
-char	*my_strcat(char *dest, char const *src)
+char *my_strcat(char *dest, char const *src)
 {
 	return(0);
 }

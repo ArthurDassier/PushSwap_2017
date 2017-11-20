@@ -2,10 +2,10 @@
 ** EPITECH PROJECT, 2017
 ** my_strncmp
 ** File description:
-**
+** strncmp
 */
 
-int	my_strncmp(char const *s1, char const *s2, int n)
+int my_strncmp(char const *s1, char const *s2, int n)
 {
 	int i = 0;
 

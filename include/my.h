@@ -6,12 +6,11 @@
 */
 #ifndef MYLIB_H
 #define MYLIB_H
-
 #include <stdarg.h>
 
 void my_putchar (char c);
 int my_isneg(int nb);
-void my_put_nbr (int nb);
+int my_put_nbr(int nb);
 void my_swap(int *a, int *b);
 void my_putstr (char const *str);
 int my_strlen (char const *str);
@@ -40,5 +39,6 @@ int my_showstr(char const *str);
 int my_showmen(char const *str, int size);
 char *my_strcat(char *dest, char const *src);
 char *my_strnccat (char *dest, char const *src, int nb);
+int my_put_nbr_base(int nb, char *base);
 
 #endif /* protection double declaration */
