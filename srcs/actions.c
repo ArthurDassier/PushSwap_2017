@@ -7,6 +7,8 @@
 
 #include "my.h"
 #include "struct.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 int is_sup(First *first_elem)
 {
@@ -17,11 +19,10 @@ int is_sup(First *first_elem)
 		actual = actual->next;
 		if (checker > actual->nb)
 			return (1);
-		checker = actual->nb
+		checker = actual->nb;
 	}
 	return(0);
 }
 void ra(First *first_elem)
 {
-
 }

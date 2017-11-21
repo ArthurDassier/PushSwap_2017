@@ -16,10 +16,6 @@ int main(int argc, char const *argv[]) {
 		insert_end(list, my_getnbr(argv[i]));
 		i++;
 	}
-	if (is_sup(list) != 1) {
-		sa;
-		ra;
-	}
 	print_list(list);
 	return (0);
 }
