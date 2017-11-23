@@ -8,14 +8,21 @@
 #include "my.h"
 #include "struct.h"
 
-int main(int argc, char const *argv[]) {
-	First *list = init(my_getnbr(argv[0]));
-	int	i = 1;
+int main(int argc, char *argv[])
+{
+	Chainlist	*list = init(my_getnbr(argv[1]));
+	int	i = 2;
 
 	while (i != argc) {
-		insert_end(list, my_getnbr(argv[i]));
+		insert_end(&list, my_getnbr(argv[i]));
 		i++;
 	}
-	print_list(list);
+	while (is_sup(list) == 1) {
+		if (list->nb < list->next->nb)
+			sa(&list);
+		if (is_sup(list) == 1)
+			ra(&list);
+	}
+	my_putchar('\n');
 	return (0);
 }

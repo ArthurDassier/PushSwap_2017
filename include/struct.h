@@ -14,15 +14,11 @@ struct Chainlist
 	Chainlist *next;
 };
 
-struct First
-{
-	Chainlist *first;
-};
-
-First *init(int nb);
-void insert_begin(First *first_elem, int data);
-void insert_end(First *first_elem, int data);
-void suppression(First *first_elem);
-void print_list(First *first_elem);
-int is_sup(First *first_elem);
-void ra(First *first_elem);
+Chainlist *init(int data);
+void insert_begin(Chainlist **first_elem, int data);
+void insert_end(Chainlist **first_elem, int data);
+void suppression(Chainlist **first_elem);
+void print_list(Chainlist *first_elem);
+int is_sup(Chainlist *first_elem);
+void ra(Chainlist **first_elem);
+void sa(Chainlist **list);

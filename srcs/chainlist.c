@@ -7,55 +7,46 @@
 
 #include "my.h"
 #include "struct.h"
-#include <stdlib.h>
-#include <stdio.h>
 
-First *init(int data)
+Chainlist *init(int data)
 {
-	First	*first_elem = malloc(sizeof(*first_elem));
 	Chainlist	*element = malloc(sizeof(*element));
 
 	element->nb = data;
 	element->next = NULL;
-	first_elem->first = element;
-	return(first_elem);
+	return(element);
 }
 
-void insert_begin(First *first_elem, int data)
+void insert_begin(Chainlist **first_elem, int data)
 {
-	Chainlist	*new_elem = malloc(sizeof(*new_elem));
+	Chainlist	*new_elem = malloc(sizeof(Chainlist));
 
+	if (new_elem == NULL)
+		return;
 	new_elem->nb = data;
-	new_elem->next = first_elem->first;
-	first_elem->first = new_elem;
+	new_elem->next = *first_elem;
+	(*first_elem) = new_elem;
 }
 
-void insert_end(First *first_elem, int data)
+void insert_end(Chainlist **first_elem, int data)
 {
-	Chainlist	*new_elem = malloc(sizeof(*new_elem));
-	Chainlist	*actual = first_elem->first;
+	Chainlist	*new_elem = malloc(sizeof(Chainlist));
+	Chainlist	*actual = (*first_elem);
 
+	if (new_elem == NULL)
+		return;
 	new_elem->nb = data;
 	new_elem->next = NULL;
+
 	while (actual->next != NULL) {
 		actual = actual->next;
 	}
 	actual->next = new_elem;
 }
 
-void suppression(First *first_elem)
+void print_list(Chainlist *first_elem)
 {
-	Chainlist	*to_supress = first_elem->first;
-
-	if (first_elem->first != NULL) {
-		first_elem->first = first_elem->first->next;
-		free(to_supress);
-	}
-}
-
-void print_list(First *first_elem)
-{
-	Chainlist	*actual = first_elem->first;
+	Chainlist	*actual = first_elem;
 
 	while (actual != NULL) {
 		printf("%d\n", actual->nb);

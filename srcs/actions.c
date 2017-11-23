@@ -7,22 +7,40 @@
 
 #include "my.h"
 #include "struct.h"
-#include <stdlib.h>
-#include <stdio.h>
 
-int is_sup(First *first_elem)
+int is_sup(Chainlist *first_elem)
 {
-	Chainlist	*actual = first_elem->first;
-	int	checker = 0;
+	Chainlist	*actual = first_elem;
 
-	while (actual != NULL) {
+	while (actual->next != NULL) {
+		if (actual->nb > actual->next->nb)
+			return(1);
 		actual = actual->next;
-		if (checker > actual->nb)
-			return (1);
-		checker = actual->nb;
 	}
 	return(0);
 }
-void ra(First *first_elem)
+
+void sa(Chainlist **list)
 {
+	Chainlist	*tmp = (*list);
+	Chainlist	*tmp2 = (*list)->next;
+
+	tmp->next = tmp2->next;
+	tmp2->next = tmp;
+	*list = tmp2;
+	my_putstr("sa ");
+}
+
+void ra(Chainlist **list)
+{
+	Chainlist	*tmp = *list;
+
+	while (tmp->next != NULL) {
+		tmp = tmp->next;
+	}
+	tmp->next = (*list);
+	(*list) = (*list)->next;
+	tmp = tmp->next;
+	tmp->next = NULL;
+	my_putstr("ra ");
 }
