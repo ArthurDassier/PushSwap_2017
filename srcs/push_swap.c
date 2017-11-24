@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc > 2000)
+	if (argc > 6000)
 		return(0);
 	Chainlist	*list_a = init(my_getnbr(argv[1]));
 	Chainlist	*list_b = NULL;
