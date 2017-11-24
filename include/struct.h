@@ -20,5 +20,8 @@ void insert_end(Chainlist **first_elem, int data);
 void suppression(Chainlist **first_elem);
 void print_list(Chainlist *first_elem);
 int is_sup(Chainlist *first_elem);
+int recup(Chainlist *first_elem);
 void ra(Chainlist **first_elem);
 void sa(Chainlist **list);
+void pa(Chainlist **list_out, Chainlist **list_in);
+void pb(Chainlist **list_out, Chainlist **list_in);

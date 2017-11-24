@@ -7,7 +7,7 @@
 
 int my_strlen_evil(char const *str)
 {
-	int i = 0;
+	int	i = 0;
 
 	while (str[i] != '\0') {
 		i = i + 1;
@@ -17,9 +17,9 @@ int my_strlen_evil(char const *str)
 
 char *my_revstr(char *str)
 {
-	int i = 0;
-	int j = my_strlen_evil(str) - 1;
-	char box;
+	int	i = 0;
+	int	j = my_strlen_evil(str) - 1;
+	char	box;
 
 	while (i < (my_strlen_evil(str)) / 2) {
 		box = str[i];

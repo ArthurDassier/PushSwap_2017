@@ -28,7 +28,6 @@ void sa(Chainlist **list)
 	tmp->next = tmp2->next;
 	tmp2->next = tmp;
 	*list = tmp2;
-	my_putstr("sa ");
 }
 
 void ra(Chainlist **list)
@@ -42,5 +41,27 @@ void ra(Chainlist **list)
 	(*list) = (*list)->next;
 	tmp = tmp->next;
 	tmp->next = NULL;
-	my_putstr("ra ");
+}
+
+void pa(Chainlist **list_out, Chainlist **list_in)
+{
+	Chainlist	*tmp = (*list_out);
+	Chainlist	*tmp2 = (*list_in);
+
+	(*list_out) = (*list_out)->next;
+	(*list_in) = tmp;
+	(*list_in)->next =  tmp2;
+}
+
+int recup(Chainlist *first_elem)
+{
+	Chainlist	*actual = first_elem;
+	int	inf = actual->nb;
+
+	while (actual->next != NULL) {
+		if (inf > actual->nb)
+			inf = actual->nb;
+		actual = actual->next;
+	}
+	return(inf);
 }

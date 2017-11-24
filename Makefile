@@ -7,6 +7,7 @@
 
 SRC	=	srcs/push_swap.c	\
 		srcs/actions.c		\
+		srcs/actions2.c		\
 		srcs/chainlist.c	\
 
 OBJ	=	$(SRC:.c = .o)
