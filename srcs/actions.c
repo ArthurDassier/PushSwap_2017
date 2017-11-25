@@ -30,7 +30,7 @@ void sa(Chainlist **list)
 	*list = tmp2;
 }
 
-void ra(Chainlist **list)
+void ra(Chainlist **list, char *str)
 {
 	Chainlist	*tmp = *list;
 
@@ -41,9 +41,10 @@ void ra(Chainlist **list)
 	(*list) = (*list)->next;
 	tmp = tmp->next;
 	tmp->next = NULL;
+	my_strcat(str, "ra ");
 }
 
-void pa(Chainlist **list_out, Chainlist **list_in)
+void pa(Chainlist **list_out, Chainlist **list_in, char *str)
 {
 	Chainlist	*tmp = (*list_out);
 	Chainlist	*tmp2 = (*list_in);
@@ -51,6 +52,7 @@ void pa(Chainlist **list_out, Chainlist **list_in)
 	(*list_out) = (*list_out)->next;
 	(*list_in) = tmp;
 	(*list_in)->next =  tmp2;
+	my_strcat(str, "pa ");
 }
 
 int recup(Chainlist *first_elem)

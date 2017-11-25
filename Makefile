@@ -18,7 +18,7 @@ LIB_DIR	=	./lib
 
 MY.H_DIR	=	./include
 
-CC	=	gcc -g3
+CC	=	gcc
 
 LIB_FLAG	=	-L$(LIB_DIR) -lmy
 
