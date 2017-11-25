@@ -12,7 +12,7 @@ SRC	=	srcs/push_swap.c	\
 
 OBJ	=	$(SRC:.c = .o)
 
-NAME	=	my_pushswap
+NAME	=	push_swap
 
 LIB_DIR	=	./lib
 
