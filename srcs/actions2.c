@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2017
-** Actions2
+** actions.c
 ** File description:
-** sctions
+** actions
 */
 
 #include "my.h"

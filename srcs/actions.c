@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** actions
+** actions.c
 ** File description:
 ** actions
 */
@@ -58,13 +58,13 @@ void pa(Chainlist **list_out, Chainlist **list_in, char *str)
 
 int recup(Chainlist *first_elem)
 {
-	Chainlist	*actual = first_elem;
-	int	inf = actual->nb;
+	Chainlist	*tmp = first_elem;
+	Chainlist	*tmp2 = first_elem;
 
-	while (actual->next != NULL) {
-		if (inf > actual->nb)
-			inf = actual->nb;
-		actual = actual->next;
+	while (tmp->next != NULL) {
+		if (tmp2->nb > tmp->next->nb)
+			return (0);
+		tmp = tmp->next;
 	}
-	return(inf);
+	return(1);
 }

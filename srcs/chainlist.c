@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2017
-** Chainlist
+** chainlist.c
 ** File description:
-** Chainlist
+** chainlist
 */
 
 #include "my.h"

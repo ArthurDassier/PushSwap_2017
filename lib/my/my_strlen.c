@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** TASK03
 ** File description:
-** my str lenght
+** mystrlenght
 */
 
 int my_strlen (char const *str)

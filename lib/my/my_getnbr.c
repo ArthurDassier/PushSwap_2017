@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** TASK05
+** my_getnbr.c
 ** File description:
 ** my_getnbr
 */

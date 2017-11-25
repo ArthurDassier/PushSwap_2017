@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** Struct
+** struct.h
 ** File description:
 ** struct
 */
