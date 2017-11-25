@@ -20,7 +20,7 @@ int is_sup(Chainlist *first_elem)
 	return(0);
 }
 
-void sa(Chainlist **list)
+void sa(Chainlist **list, char *str)
 {
 	Chainlist	*tmp = (*list);
 	Chainlist	*tmp2 = (*list)->next;
@@ -28,6 +28,7 @@ void sa(Chainlist **list)
 	tmp->next = tmp2->next;
 	tmp2->next = tmp;
 	*list = tmp2;
+	my_strcat(str, "sa ");
 }
 
 void ra(Chainlist **list, char *str)
