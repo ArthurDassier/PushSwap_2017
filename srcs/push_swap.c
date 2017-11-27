@@ -8,14 +8,14 @@
 #include "my.h"
 #include "struct.h"
 
-const void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	Chainlist	*list_a = init(my_getnbr(argv[1]));
 	Chainlist	*list_b = NULL;
 	char	*str = malloc(sizeof(char) * 400000);
 
-	if (argc >= 500)
-		return;
+	if (argc > 600)
+		return(84);
 	for (int i = 2; i != argc; i++)
 		insert_end(&list_a, my_getnbr(argv[i]));
 	while (is_sup(list_a) == 1) {
@@ -30,4 +30,5 @@ const void main(int argc, char *argv[])
 		write(1, str, (my_strlen(str) - 1));
 	free(str);
 	my_putchar('\n');
+	return(0);
 }
