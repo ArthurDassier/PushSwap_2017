@@ -6,7 +6,6 @@
 */
 
 #include "my.h"
-#include "struct.h"
 
 Chainlist *init(int data)
 {

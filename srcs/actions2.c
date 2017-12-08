@@ -6,7 +6,6 @@
 */
 
 #include "my.h"
-#include "struct.h"
 
 void pb(Chainlist **list_out, Chainlist **list_in, char *str)
 {

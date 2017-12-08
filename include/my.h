@@ -4,12 +4,15 @@
 ** File description:
 ** mes_prototypes
 */
+
 #ifndef MYLIB_H
 #define MYLIB_H
+
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include "struct.h"
 
 void my_putchar (char c);
 int my_isneg(int nb);
@@ -20,4 +23,4 @@ int my_strlen (char const *str);
 int my_getnbr(char const *str);
 char *my_strcat(char *dest, char const *src);
 
-#endif /* protection double declaration */
+#endif

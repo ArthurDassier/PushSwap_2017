@@ -5,8 +5,10 @@
 ** struct
 */
 
+#ifndef STRUCT_H
+#define STRUCT_H
+
 typedef struct Chainlist Chainlist;
-typedef struct First First;
 
 struct Chainlist
 {
@@ -25,3 +27,5 @@ void ra(Chainlist **first_elem, char *str);
 void sa(Chainlist **list, char *str);
 void pa(Chainlist **list_out, Chainlist **list_in, char *str);
 void pb(Chainlist **list_out, Chainlist **list_in, char *str);
+
+#endif

@@ -6,7 +6,6 @@
 */
 
 #include "my.h"
-#include "struct.h"
 
 int is_sup(Chainlist *first_elem)
 {
