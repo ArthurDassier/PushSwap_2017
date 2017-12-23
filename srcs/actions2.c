@@ -1,16 +1,16 @@
 /*
 ** EPITECH PROJECT, 2017
-** actions.c
+** actions2.c
 ** File description:
 ** actions
 */
 
 #include "my.h"
 
-void pb(Chainlist **list_out, Chainlist **list_in, char *str)
+void pb(chainlist **list_out, chainlist **list_in, char *str)
 {
-	Chainlist	*tmp = (*list_out);
-	Chainlist	*tmp2 = (*list_in);
+	chainlist	*tmp = (*list_out);
+	chainlist	*tmp2 = (*list_in);
 
 	(*list_out) = (*list_out)->next;
 	(*list_in) = tmp;

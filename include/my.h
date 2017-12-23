@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
-#include "struct.h"
+#include "pushswp.h"
 
 void my_putchar (char c);
 int my_isneg(int nb);

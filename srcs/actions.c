@@ -7,9 +7,9 @@
 
 #include "my.h"
 
-int is_sup(Chainlist *first_elem)
+int is_sup(chainlist *first_elem)
 {
-	Chainlist	*actual = first_elem;
+	chainlist	*actual = first_elem;
 
 	while (actual->next != NULL) {
 		if (actual->nb > actual->next->nb)
@@ -19,10 +19,10 @@ int is_sup(Chainlist *first_elem)
 	return(0);
 }
 
-void sa(Chainlist **list, char *str)
+void sa(chainlist **list, char *str)
 {
-	Chainlist	*tmp = (*list);
-	Chainlist	*tmp2 = (*list)->next;
+	chainlist	*tmp = (*list);
+	chainlist	*tmp2 = (*list)->next;
 
 	tmp->next = tmp2->next;
 	tmp2->next = tmp;
@@ -30,9 +30,9 @@ void sa(Chainlist **list, char *str)
 	my_strcat(str, "sa ");
 }
 
-void ra(Chainlist **list, char *str)
+void ra(chainlist **list, char *str)
 {
-	Chainlist	*tmp = *list;
+	chainlist	*tmp = *list;
 
 	while (tmp->next != NULL) {
 		tmp = tmp->next;
@@ -44,10 +44,10 @@ void ra(Chainlist **list, char *str)
 	my_strcat(str, "ra ");
 }
 
-void pa(Chainlist **list_out, Chainlist **list_in, char *str)
+void pa(chainlist **list_out, chainlist **list_in, char *str)
 {
-	Chainlist	*tmp = (*list_out);
-	Chainlist	*tmp2 = (*list_in);
+	chainlist	*tmp = (*list_out);
+	chainlist	*tmp2 = (*list_in);
 
 	(*list_out) = (*list_out)->next;
 	(*list_in) = tmp;
@@ -55,10 +55,10 @@ void pa(Chainlist **list_out, Chainlist **list_in, char *str)
 	my_strcat(str, "pa ");
 }
 
-int recup(Chainlist *first_elem)
+int recup(chainlist *first_elem)
 {
-	Chainlist	*tmp = first_elem;
-	Chainlist	*tmp2 = first_elem;
+	chainlist	*tmp = first_elem;
+	chainlist	*tmp2 = first_elem;
 
 	while (tmp->next != NULL) {
 		if (tmp2->nb > tmp->next->nb)

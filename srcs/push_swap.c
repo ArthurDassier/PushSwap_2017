@@ -7,14 +7,12 @@
 
 #include "my.h"
 
-int main(int argc, char *argv[])
+int brain(int argc, char *argv[])
 {
-	Chainlist	*list_a = init(my_getnbr(argv[1]));
-	Chainlist	*list_b = NULL;
-	char	*str = malloc(sizeof(char) * 400000);
+	chainlist	*list_a = init(my_getnbr(argv[1]));
+	chainlist	*list_b = NULL;
+	char	*str = malloc(sizeof(char) * TAILLE_MAX);
 
-	if (argc > 600)
-		return(84);
 	for (int i = 2; i != argc; i++)
 		insert_end(&list_a, my_getnbr(argv[i]));
 	while (is_sup(list_a) == 1) {
@@ -30,4 +28,12 @@ int main(int argc, char *argv[])
 	free(str);
 	my_putchar('\n');
 	return(0);
+}
+
+int main(int argc, char *argv[])
+{
+	if (argc > 600)
+		return(84);
+	brain(argc, argv);
+	return (0);
 }

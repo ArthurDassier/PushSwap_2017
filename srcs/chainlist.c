@@ -7,18 +7,18 @@
 
 #include "my.h"
 
-Chainlist *init(int data)
+chainlist *init(int data)
 {
-	Chainlist	*element = malloc(sizeof(*element));
+	chainlist	*element = malloc(sizeof(*element));
 
 	element->nb = data;
 	element->next = NULL;
 	return(element);
 }
 
-void insert_begin(Chainlist **first_elem, int data)
+void insert_begin(chainlist **first_elem, int data)
 {
-	Chainlist	*new_elem = malloc(sizeof(Chainlist));
+	chainlist	*new_elem = malloc(sizeof(chainlist));
 
 	if (new_elem == NULL)
 		return;
@@ -27,10 +27,10 @@ void insert_begin(Chainlist **first_elem, int data)
 	(*first_elem) = new_elem;
 }
 
-void insert_end(Chainlist **first_elem, int data)
+void insert_end(chainlist **first_elem, int data)
 {
-	Chainlist	*new_elem = malloc(sizeof(Chainlist));
-	Chainlist	*actual = (*first_elem);
+	chainlist	*new_elem = malloc(sizeof(chainlist));
+	chainlist	*actual = (*first_elem);
 
 	if (new_elem == NULL)
 		return;
@@ -43,9 +43,9 @@ void insert_end(Chainlist **first_elem, int data)
 	actual->next = new_elem;
 }
 
-void print_list(Chainlist *first_elem)
+void print_list(chainlist *first_elem)
 {
-	Chainlist	*actual = first_elem;
+	chainlist	*actual = first_elem;
 
 	while (actual != NULL) {
 		printf("%d\n", actual->nb);
