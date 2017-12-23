@@ -48,7 +48,7 @@ void print_list(chainlist *first_elem)
 	chainlist	*actual = first_elem;
 
 	while (actual != NULL) {
-		printf("%d\n", actual->nb);
+		//my_put_nbr("%d\n", actual->nb);
 		actual = actual->next;
 	}
 }
