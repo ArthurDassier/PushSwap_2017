@@ -21,7 +21,6 @@ chainlist *init(int data);
 void insert_begin(chainlist **first_elem, int data);
 void insert_end(chainlist **first_elem, int data);
 void suppression(chainlist **first_elem);
-void print_list(chainlist *first_elem);
 int is_sup(chainlist *first_elem);
 int recup(chainlist *first_elem);
 void ra(chainlist **first_elem, char *str);

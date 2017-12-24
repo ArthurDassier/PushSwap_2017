@@ -42,13 +42,3 @@ void insert_end(chainlist **first_elem, int data)
 	}
 	actual->next = new_elem;
 }
-
-void print_list(chainlist *first_elem)
-{
-	chainlist	*actual = first_elem;
-
-	while (actual != NULL) {
-		//my_put_nbr("%d\n", actual->nb);
-		actual = actual->next;
-	}
-}
